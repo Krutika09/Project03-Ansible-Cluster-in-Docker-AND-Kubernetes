@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: master
-    image: <your-dockerhub-username>/rhel-ansible:v1
+    image: krutika09/rhel-ansible:v1
     ports:
     - containerPort: 22
