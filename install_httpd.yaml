@@ -1,0 +1,14 @@
+# install_httpd.yaml
+- name: Install Apache Web Server
+  hosts: node
+  become: true
+  tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
