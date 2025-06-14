@@ -1,0 +1,13 @@
+# ansible-master.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ansible-master
+  labels:
+    role: master
+spec:
+  containers:
+  - name: master
+    image: <your-dockerhub-username>/rhel-ansible:v1
+    ports:
+    - containerPort: 22
